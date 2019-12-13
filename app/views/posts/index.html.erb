@@ -1,11 +1,4 @@
-<! COMMENTED OUT 
-
 <% @posts.each do |post| %>
-  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
-<% end %>
-
-TILL HERE! >
-
-<% @posts.each do |post| %>
-  <div><%= link_to post.title, post_path(post.id) %></div>
+  <%temp_text = post.title + " - " + post.description%>
+  <div><%= link_to temp_text, post_path(post.id) %></div>
 <% end %>
